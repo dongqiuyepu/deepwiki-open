@@ -305,6 +305,18 @@ docker-compose up
 
 **Logging Path Security Considerations:** In production environments, ensure the `api/logs` directory and any custom log file path are secured with appropriate filesystem permissions and access controls. The application enforces that `LOG_FILE_PATH` resides within the project's `api/logs` directory to prevent path traversal or unauthorized writes.
 
+## 🔌 MCP Server
+
+DeepWiki includes an MCP (Model Context Protocol) server that allows you to use the repository analysis capabilities with MCP-compatible clients like Claude for Desktop.
+
+### Quick Start
+
+1. Set up your environment variables (same as the main application)
+2. Run the MCP server: `python api/run_mcp_server.py`
+3. Configure your MCP client to connect to the server
+
+For detailed setup instructions, see [MCP Server Documentation](./api/MCP_SERVER.md).
+
 ## 🛠️ Advanced Setup
 
 ### Environment Variables
